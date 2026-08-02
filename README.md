@@ -29,7 +29,7 @@ The dataset contains sales order records such as order date, region, category, c
 5. Wrote business insights and recommendations.
 
 ## Dashboard Preview
-![Dashboard Preview](dashboard-preview.png)
+<img width="1692" height="1374" alt="Dashboard Preview" src="https://github.com/user-attachments/assets/7bb0e414-d1f5-42cf-9797-384b8e017883" />
 
 ## Project Files
 - `sales-performance-analysis.xlsx`: source dataset (Raw Data sheet)
