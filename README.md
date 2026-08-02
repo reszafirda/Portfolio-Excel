@@ -32,9 +32,8 @@ The dataset contains sales order records such as order date, region, category, c
 <img width="1692" height="1374" alt="Dashboard Preview" src="https://github.com/user-attachments/assets/7bb0e414-d1f5-42cf-9797-384b8e017883" />
 
 ## Project Files
-- `sales-performance-analysis.xlsx`: source dataset (Raw Data sheet)
-- `sales-performance-analysis.xlsx`: Excel analysis workbook (Dashboard & Pivot sheets)
-- `dashboard-preview.png`: dashboard screenshot
+- [`sales-performance-analysiss.xlsx`](sales-performance-analysiss.xlsx): Excel analysis workbook (Raw Data, Pivot & Dashboard)
+- [`dashboard-preview.png`](dashboard-preview.png): Dashboard screenshot
 - `data-cleaning-log.md`: cleaning notes (documented inside README)
 - `business-insights.md`: key findings and recommendations (documented inside README)
 
