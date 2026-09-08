@@ -33,7 +33,7 @@ The dataset contains 725 sales order records, including order date, region, cate
 
 ## Project Files
 - [`sales-performance-analysiss.xlsx`](sales-performance-analysiss.xlsx): Full Excel workbook (Raw Data, Cleaned Data, PivotTables, Business Questions, Cleaning Log, and Dashboard).
-- [`dashboard-preview.png`](dashboard-preview.png): Dashboard screenshot
+- [`dashboard-preview.png`](Dashboard Preview.png): Dashboard screenshot
 
 Cleaning decisions and business question answers are documented directly inside the Excel file (Cleaning Log Template and Business Questions sheets), not as separate files.
 
