@@ -1,7 +1,7 @@
 # Sales Performance Analysis
 
 ## Project Overview
-This project analyzes sales data to understand revenue trends, profit margins, regional performance, and sales channel effectiveness using Microsoft Excel and Power Query.
+This project analyzes sales order data to understand revenue trends, profit margins, regional performance, and sales channel effectiveness using Microsoft Excel and Power Query.
 
 ## Business Objective
 1. Determine the total **Revenue** for each **Product Category**.
@@ -11,27 +11,37 @@ This project analyzes sales data to understand revenue trends, profit margins, r
 5. Review the **Monthly Sales Performance** to identify the peak and lowest selling months.
 
 ## Dataset
-The dataset contains 725 sales order records, including order date, region, category, channel, quantity, revenue, cost, profit, and order status.
+725 order records with order date, customer, region, channel, order status, product, quantity, revenue, cost, profit, and sales representative.
+
+It is a practice dataset with planted data quality promblems: mixed text formatting, mixed date formats, missing value, duplicate order IDs, and revenue stored as text.
 
 ## Tools Used
 - Microsoft Excel
 - Power Query
 - Excel formulas
-- PivotTable & summary analysis
-- Excel PivotChart
+- PivotTable and PivotChart
+- GitHub documentation
 
 ## Analysis Process
-1. Reviewed the raw dataset and identified data quality issues (missing values, duplicate order IDs, inconsistent text formatting, and raw date formatting).
-2. Cleaned the data using Power Query — trimmed whitespace, standardized text casing, and converted data types.
-3. Built a rule-based Quality Flag column to categorize each row (Clean, Duplicate Order, Check Quantity, Check Date, Check Revenue, Review Status) without deleting the original raw data.
-4. Created PivotTable to summarize revenue and profit by category, region, channel, and month, filtered to validated ("Clean") rows only.
-5. Built an interactive dashboard with KPI cards and PivotCharts.
-6. Documented business questions and cleaning decisions (see the Business Questions and Cleaning Log Template sheets inside the Excel file).
+1. Reviewed the raw data and the data dictionary.
+2. Cleaned the data in Power Query: standardized text, converted dates, and turning text revenue into numbers.
+3. Added a Quality Flag column that marks duplicates, blanks, and Returned/Cancelled orders. No row was deleted.
+4. Built PivotTable on Clean rows only.
+5. Built a dashboard with KPI cards and PivotCharts.
+6. Wrote the cleaning log and the business insights.
+
+## Key Insights
+- Electronics earns the most revenue.
+- Stationery has the best margin and Electronics has the lowest margin.
+- Makassar leads on revenue is below Medan and Bandung.
+- Retail has the most orders, while Corporate earns the most completed revenue.
+- March is the peak month. August has one order only, so it is an anomaly, not a trend.
+- 105 of 725 rows were flagged and kept out of the KPIs.
 
 ## Dashboard Preview
 <img width="1692" height="1374" alt="Dashboard Preview" src="https://github.com/user-attachments/assets/7bb0e414-d1f5-42cf-9797-384b8e017883" />
 
-## Project Files
+## Files
 - [`sales-performance-analysiss.xlsx`](sales-performance-analysiss.xlsx): Full Excel workbook (Raw Data, Cleaned Data, PivotTables, Business Questions, Cleaning Log, and Dashboard).
 - [`dashboard-preview.png`](dashboard-preview.png): Dashboard screenshot
 
@@ -45,8 +55,15 @@ Cleaning decisions and business question answers are documented directly inside 
 - **Sales Channel**: Retail contributed  the most revenue from completed orders, ahead of Corporate, Marketplace, and Online.
 - **Monthly Trend**: Revenue peaked in March (~Rp297,174,300) and dropped sharply in August (~Rp495,000), an anomaly worth investigating.
 
-## Recommendation
-- **Prioritize Electronics & Furniture**: These two categories drive the majority of revenue — ensure stock and marketing focus stays strong here.
-- **Leverage Stationery's Margin**: Despite lower revenue, Stationery's high profit margin makes it worth promoting more aggressively relative to its cost.
-- **Investigate the August Drop**: The sharp revenue decline in August should be reviewed — check whether it reflects a real seasonal dip or missing/incomplete data.
+## Summary Metrics
+
+Metric	Value
+Clean Revenue	Rp 1,430,336,900
+Clean Profit	Rp 423,861,900
+Clean Orders	620
+Profit Margin	29.6%
+Average Order Value	Rp 2,306,995
+Rows Flagged for Review	105
+
+All metrics use Clean rows only. The 105 flagged rows (duplicate order IDs, blank quantity, date, or revenue, and Returned/Cancelled orders) stay in the workbook but are excluded from these numbers.
 - **Replicate Makassar's Successs**: Study what's driving Makassar's strong performance and apply similar strategies to lower-performing regions.
